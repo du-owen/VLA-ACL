@@ -1,0 +1,10 @@
+# Example LIBERO eval config with VLA-ACL vision patch pruning.
+# Usage: python experiments/robot/libero/run_libero_eval.py --config_path experiments/patch_scorer_eval_config.yaml
+pretrained_checkpoint: checkpoints/openvla-7b-oft-finetuned-libero-10
+task_suite_name: libero_10
+num_trials_per_task: 50
+
+patch_scorer:
+  enabled: true
+  checkpoint: runs/vla-acl+libero_10_no_noops+k64+teacher-0.5+gt-0.5+b8+lr-0.0001/patch_scorer_head--5000_checkpoint.pt
+  prune_topk: 64  # Must match `soft_top_k` used in train_scorer.py
