@@ -1,3 +1,5 @@
+
+
 # VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models
 
 [![arXiv](https://img.shields.io/badge/arXiv-2610.08133-b31b1b.svg)](https://arxiv.org/abs/2610.08133)
@@ -7,6 +9,8 @@ VLA-ACL learns which vision tokens a Vision-Language-Action model needs. A light
 a frozen, fine-tuned [OpenVLA-OFT](https://github.com/moojink/openvla-oft) policy so that the actions predicted from the
 top-K vision patches per camera view stay consistent with the full-context actions and the ground-truth actions. At
 inference time, only the top-K patches are passed to the LLM backbone.
+
+https://github.com/user-attachments/assets/cfcf3f39-19e7-4f3a-a720-8e662b2b76c5
 
 All code lives in [`src/openvla-oft`](src/openvla-oft). See [SETUP.md](src/openvla-oft/SETUP.md) for installation and
 [LIBERO.md](src/openvla-oft/LIBERO.md) for the LIBERO setup and datasets. Run the commands below from `src/openvla-oft`.
